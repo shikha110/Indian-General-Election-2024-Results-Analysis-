@@ -418,6 +418,7 @@ order by
 
 
 -- For the state of Maharashtra, what are the total number of seats, total number of candidates, total number of parties, total votes (including EVM and postal), and the breakdown of EVM and postal votes?
+```SQL
 select
     count(distinct cr.Constituency_ID) as Total_Seats,
     count(distinct cd.Candidate) as Total_Candidates,
