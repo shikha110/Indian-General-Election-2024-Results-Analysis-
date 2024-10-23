@@ -3,7 +3,27 @@
 ![image](https://github.com/user-attachments/assets/2436c081-7d91-488f-ae4d-d1432b552104)
 
 
-Indian General Elections that occured earlier this year, had amazing turn of events, collecting those in real time data, cleaning them showcasing them in excel files and running queries using SQL on PostgreQL
+This project involves exploring a comprehensive dataset related to the 2024 Indian general election, focusing mainly on two major parties that are NDA & I.N.D.I.A Alliance, encompassing various attributes such as:
+
+- *Constituency-wise results*: Analyzing data related to the 543 parliamentary constituencies, including winning political parties and their vote shares.
+- *Party-wise results*: Examining data on the performance of different political parties, including their vote shares and seats won.
+- *Candidate-wise results*: Studying data related to individual candidates, including their vote shares and margins of victory.
+
+  
+Utilizing SQL and Excel, that helped to:
+
+- Analyze the dataset to practice advanced SQL skills
+- Solve multiple queries to extract insights
+- Generate valuable insights from the data
+
+Primary objectives:
+
+- Enhance advanced SQL skills
+- Uncover meaningful patterns and trends in the Indian election dataset
+- Demonstrate ability to extract and interpret data insights using SQL and Excel
+
+
+
 
 CREATE TABLE :
 ```SQL
