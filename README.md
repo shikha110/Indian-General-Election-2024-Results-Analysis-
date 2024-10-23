@@ -93,14 +93,14 @@ select * from states;
 FEW QUERIES:
 
 
--- Total number of seats.
+-- Q Total number of seats.
 ```SQL
 select 
 distinct count (parliament_constituency) as total_seats
 from constituencywise_results;
 ```
 
--- Total number of seats available for election in each state.
+-- Q Total number of seats available for election in each state.
 ```SQL
 select
     s.State as State_Name,
@@ -117,7 +117,7 @@ order by
     s.State;
 ```
 
--- Total Seats Won by NDA Allianz
+-- Q Total Seats Won by NDA Allianz
 ```SQL
 select
     sum(case 
@@ -144,7 +144,7 @@ from
 
 ```
 
--- Seats Won by NDA Allianz Parties
+-- Q Seats Won by NDA Allianz Parties
 ```SQL
 select
     party as Party_Name,
@@ -172,7 +172,7 @@ order by Seats_Won desc;
 ```
 
 
--- Total Seats Won by I.N.D.I.A. Allianz
+-- Q Total Seats Won by I.N.D.I.A. Allianz
 ```SQL
 select 
     sum(case 
@@ -206,7 +206,7 @@ from
 
 ```
 
--- Seats Won by I.N.D.I.A. Allianz Parties
+-- Q Seats Won by I.N.D.I.A. Allianz Parties
 ```SQL
 select 
     party as Party_Name,
@@ -241,7 +241,7 @@ order by Seats_Won desc;
 ```
 
 
--- Add new column field in table partywise_results to get the Party Allianz as NDA, I.N.D.I.A and OTHER
+-- Q Add new column field in table partywise_results to get the Party Allianz as NDA, I.N.D.I.A and OTHER
 ```SQL
 select * from partywise_results; 
 
@@ -302,7 +302,7 @@ where party_alliance IS NULL;
 ```	
 
 
--- Which party alliance (NDA, I.N.D.I.A, or OTHER) won the most seats across all states?
+-- Q Which party alliance (NDA, I.N.D.I.A, or OTHER) won the most seats across all states?
 ```SQL
 select
     p.party_alliance,
@@ -320,7 +320,7 @@ order by
 
 ```
 
---  Winning candidate's name, their party name, total votes, and the margin of victory for a specific state and constituency?
+--  Q Winning candidate's name, their party name, total votes, and the margin of victory for a specific state and constituency?
 ```SQL
 select 
 cr.Winning_Candidate,
@@ -337,7 +337,7 @@ join states s on sr.State_ID = s.State_ID
 where s.State = 'Uttar Pradesh' and cr.Constituency_Name = 'AMETHI';
 ```
 
---  What is the distribution of EVM votes versus postal votes for candidates in a specific constituency?
+-- Q  What is the distribution of EVM votes versus postal votes for candidates in a specific constituency?
 ```SQL
 select 
     cd.EVM_Votes,
@@ -353,7 +353,7 @@ where
 
 ```
 
---  Which parties won the most seats in s State, and how many seats did each party win?
+-- Q  Which parties won the most seats in s State, and how many seats did each party win?
 ```SQL
 SELECT 
     p.Party,
@@ -374,7 +374,7 @@ ORDER BY
 
 ```
 
---  What is the total number of seats won by each party alliance (NDA, I.N.D.I.A, and OTHER) in each state for the India Elections 2024
+-- Q  What is the total number of seats won by each party alliance (NDA, I.N.D.I.A, and OTHER) in each state for the India Elections 2024
 ```SQL
 select
     s.State as State_Name,
@@ -399,7 +399,7 @@ order by
 ```
 
 
--- Which candidate won and which candidate was the runner-up in each constituency of State for the 2024 elections?
+--Q  Which candidate won and which candidate was the runner-up in each constituency of State for the 2024 elections?
 ```SQL
 with RankedCandidates as (
     select
@@ -437,7 +437,7 @@ order by
 ```
 
 
--- For the state of Maharashtra, what are the total number of seats, total number of candidates, total number of parties, total votes (including EVM and postal), and the breakdown of EVM and postal votes?
+--Q  For the state of Maharashtra, what are the total number of seats, total number of candidates, total number of parties, total votes (including EVM and postal), and the breakdown of EVM and postal votes?
 ```SQL
 select
     count(distinct cr.Constituency_ID) as Total_Seats,
@@ -463,5 +463,6 @@ where
 
 
 Tools & Technologies:
+
 SQL, EXCEL, PostgreSQL
 
